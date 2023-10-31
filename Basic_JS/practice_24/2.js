@@ -76,23 +76,23 @@ getItemById(id) {
 
 const list = new TodoList("Homework List")
 
-const task_1 = new TodoItem("Clean all rooms")
-const task_2 = new TodoItem("Wash dishes")
-const task_3 = new TodoItem("Ironing clothes")
-const task_4 = new TodoItem("Buy some products")
+const obj1 = new TodoItem("Clean all rooms")
+const obj2 = new TodoItem("Wash dishes")
+const obj3 = new TodoItem("Ironing clothes")
+const obj4 = new TodoItem("Buy some products")
 
-list.addItem(task_1)
-list.addItem(task_2)
-list.addItem(task_3)
-list.addItem(task_4)
-
-console.log(list);
-
-task_4.checked = true
+list.addItem(obj1)
+list.addItem(obj2)
+list.addItem(obj3)
+list.addItem(obj4)
 
 console.log(list);
 
-list.removeItemById(task_1.id)
-list.removeItemById(task_3.id)
+obj4.checked = true
+
+console.log(list);
+
+list.removeItemById(obj1.id)
+list.removeItemById(obj3.id)
 
 console.log(list);

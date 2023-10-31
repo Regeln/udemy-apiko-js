@@ -10,28 +10,28 @@ Calculator.prototype.sum = function (a, b) {
     return a + b;
 }
 
-Calculator.prototype.subtruct = function (a, b) {
+Calculator.prototype.subtract = function (a, b) {
     return a - b;
 }
 
 const calculator = new Calculator();
 const resultSum = calculator.sum(5, 3);
-const resultSubtruct = calculator.subtruct(5, 3);
+const resultSubtract = calculator.subtract(5, 3);
 
 console.log(resultSum);
-console.log(resultSubtruct);
+console.log(resultSubtract);
 
 function AdvancedCalculator() {}
 
 AdvancedCalculator.prototype = Object.create(Calculator.prototype);
 
-AdvancedCalculator.prototype.multiply = (num1, num2) => {
-    return num1 * num2;
+AdvancedCalculator.prototype.multiply = (a, b) => {
+    return a * b;
 }
 
-AdvancedCalculator.prototype.divide = (num1, num2) => {
-    if(num2 !== 0) {
-        return num1 / num2;
+AdvancedCalculator.prototype.divide = (a, b) => {
+    if(b !== 0) {
+        return a / b;
     } else {
         return "Помилка: ділення на нуль";
     }

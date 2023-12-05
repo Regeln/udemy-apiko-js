@@ -5,16 +5,16 @@
 //або виводить помилку в консоль якщо це не стрічка або колбек не є функцією
 
 function isString(callback, value) {
-    if (typeof callback === "function" && typeof value === "string") {
-      callback(value);
-    } else {
-        console.error('Invalid input');
+      if (typeof callback === "function" && typeof value === "string") {
+        callback(value);
+      } else {
+          console.error('Invalid input');
+      }
     }
-  }
-  
-  function callbackFunc(str) {
-    console.log(`Input string: ${str}`)
-  }
-  
-  isString(callbackFunc, 'Hello world')
-  isString(callbackFunc, 53)
+    
+    function callbackFunc(str) {
+      console.log(`Input string: ${str}`);
+    }
+    
+isString(callbackFunc, 'Hello world');
+isString(callbackFunc, 53);
